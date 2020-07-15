@@ -88,3 +88,15 @@ then
 else
 	echo Invalid
 fi
+
+#valid password Usecase 8
+
+read -p "Enter the PassKey : " passKey
+
+if [[ ${#passKey} -ge 6 && "$passKey" == *[A-Z]* && "$passKey" == *[a-z]* && "$passKey" == *[0-9]* && "$passKey" == *[\@\#\^]* ]]
+then
+	echo valid
+else
+	echo Invalid
+fi
+
