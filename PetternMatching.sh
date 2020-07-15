@@ -51,3 +51,16 @@ then
 else
 	echo "Invalid"
 fi
+
+#Valid Password
+
+read -p "Enter Pass minimum 8 char: " passKey
+
+passPatt=^[A-Za-z]{8}
+
+if [[ $passKey =~ $passPatt ]]
+then
+	echo "valid"
+else
+	echo "Invalid"
+fi
