@@ -64,3 +64,16 @@ then
 else
 	echo "Invalid"
 fi
+
+#valid PassWord UseCase 6
+
+read -p "Enter the password case type : " passKey
+
+passPatt=^[A-Z][a-z]{8}
+
+if [[ $passKey =~ $passPatt ]]
+then
+	echo valid
+else
+	echo Invalid
+fi
