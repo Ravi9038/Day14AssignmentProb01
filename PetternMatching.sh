@@ -100,3 +100,18 @@ else
 	echo Invalid
 fi
 
+
+#Valid Email Sample
+
+##!/bin/bash -x
+
+read -p "Enter admin email: " email
+
+emailPattern='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$'
+
+if [[ "$email" =~ $emailPattern ]]
+then
+	echo "Email address $email is valid."
+else
+	echo "Email address $email is invalid."
+fi
