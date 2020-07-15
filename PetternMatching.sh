@@ -37,3 +37,17 @@ then
 else
 	echo "Email address $email is invalid."
 fi
+
+#valid Phone Number
+
+
+read -p "Enter The Mobile Number " mobNo
+
+passPatt='^((\+){1}91){1}[1-9]{1}[0-9]{9}$'
+
+if [[ $mobNo =~ $passPatt ]]
+then
+	echo "valid"
+else
+	echo "Invalid"
+fi
